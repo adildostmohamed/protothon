@@ -1,0 +1,8 @@
+//import bootstrap main sass file
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+//import custom sass partials
+@import "base/base";
+@import "components/components";
+@import "modules/modules";
+@import "templates/templates";
