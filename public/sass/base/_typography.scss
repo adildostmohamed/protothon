@@ -1,8 +1,10 @@
 //set font size so that 1 rem = 10px
 body {
   font-size: 62.5%;
+  font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @extend .text;
 }
 
 //utility class to make text invisible but still screen reader accessible
@@ -10,4 +12,25 @@ body {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+.text--feature {
+  font-size: 4.2rem;
+}
+
+.text--large {
+  font-size: 2.2rem;
+}
+
+.text {
+  font-size: 1.6rem;
+}
+
+.text--small {
+  font-size: 1.4rem;
+}
+
+.text--tiny {
+  font-size: 1.2rem;
 }

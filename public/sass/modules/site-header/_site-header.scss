@@ -1,0 +1,48 @@
+.site-header {
+  background-color: transparent;
+  padding: 24px 0;
+}
+
+%header__link {
+  color: $color-white;
+  font-size: 2.0rem;
+  text-decoration: none;
+  &:hover, &:active {
+    color: $color-white;
+    text-decoration: none;
+  }
+  &:focus {
+    color: $color-white;
+    text-decoration: none;
+  }
+}
+
+.header-menu__link {
+  @extend %header__link;
+}
+
+.header-search__link {
+  @extend %header__link;
+}
+
+
+
+// .header-menu {
+//   color: $color-white;
+//   font-size: 2.0rem;
+//   display: inline-block;
+//   margin: 0;
+// }
+
+i.header__icon {
+  color: $color-white;
+  font-size: 2.0rem;
+  margin-right: 12px;
+}
+
+.header__search {
+  color: $color-white;
+  font-size: 2.0rem;
+  display: inline-block;
+  margin: 0;
+}

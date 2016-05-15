@@ -5,7 +5,7 @@ function initMap() {
   var defaultCenter = {lat: -25.363, lng: 131.044};
 
   //create a map and pass in some basic parameters
-  var map = new google.maps.Map(document.getElementById('map'), {
+  var map = new google.maps.Map(document.getElementsByClassName('js-map')[0], {
     center: defaultCenter,
     zoom: 12
   });
@@ -14,7 +14,11 @@ function initMap() {
   var marker = new google.maps.Marker({
     position: defaultCenter,
     map: map,
-    title: 'Hello World!'
+    title: 'Hello World!',
+    data: {
+      a: 'This is updating the template',
+      b: 'This looks ok'
+    }
   });
 
   // Try HTML5 geolocation to get location
@@ -34,10 +38,10 @@ function initMap() {
     handleLocationError(false, marker, map.getCenter());
   }
 
-
   //add a custom function to the marker to trigger a function returned from an iife
   marker.addListener('click', function() {
-    changeText.change('come on!');
+    // issue.setContent(marker.data);
+    issue.openModal(marker.data.a);
   });
 
 }

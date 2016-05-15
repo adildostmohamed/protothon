@@ -1,6 +1,107 @@
 <% include partials/head %>
-
-<h1 id="h">Hello world</h1>
-<div id="map"></div>
-
+<nav role="navigation" class="col-xs-6 main-nav js-main-nav">
+  <ul class="main-nav__list">
+    <li class="main-nav__item">
+      <a class="main-nav__link">About us</a>
+    </li>
+    <li class="main-nav__item">
+      <a class="main-nav__link">Safety</a>
+    </li>
+    <li class="main-nav__item">
+      <a class="main-nav__link">News and press</a>
+    </li>
+    <li class="main-nav__item">
+      <a class="main-nav__link">Innovation</a>
+    </li>
+    <li class="main-nav__item">
+      <a class="main-nav__link">Have your say</a>
+    </li>
+    <li class="main-nav__item">
+      <a class="main-nav__link">Careers</a>
+    </li>
+    <li class="main-nav__item">
+      <a class="main-nav__link">Infrastructure services</a>
+    </li>
+    <li class="main-nav__item">
+      <a class="main-nav__link">Community</a>
+    </li>
+    <li class="main-nav__item">
+      <a class="main-nav__link">Blog</a>
+    </li>
+    <li class="main-nav__item">
+      <a class="main-nav__link">Contact us</a>
+    </li>
+  </ul>
+</nav>
+<div class="page-wrapper js-page-wrapper">
+  <main role="main">
+    <section class="hero" class="parallax-window" >
+      <% include partials/site-header %>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+            <label class="hero__search-label js-hero__search-trigger" for="hero-search-input">How can we help?</label>
+            <input id="hero-search-input" type="text" name="search" class="hero__search-input js-hero__search-trigger" />
+          </div>
+        </div>
+      </div>
+      <div class="overlay">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-10">
+              First column search
+            </div>
+            <div class="col-xs-2 overlay-close">
+              <a href="#" class="overlay-close__link js-overlay-close__link"><i class="fa fa-times overlay-close__icon" aria-hidden="true"></i><span class="overlay-close__text">Exit</span></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 search">
+              <p id="search-hint" class="search-hint">
+                Start typing to find results
+              </p>
+              <label class="text--hidden" for="search-input">Search</label>
+              <i class="fa fa-search search-icon"></i><input id="search-input" class="search-input js-search-input" name="search-input" type="text" aria-describedby="search-hint"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="map-wrapper js-map-wrapper container">
+      <h1 id="h">Hello world</h1>
+      <div class="map-expand__wrapper">
+        <button class="map-expand__btn js-expand__icon"><i class="fa fa-arrows-alt map-expand__icon"></i><span class="text--hidden">Expand map</span></button>
+      </div>
+      <div id="map" class="map js-map"></div>
+      <% include partials/map-issue %>
+    </section>
+    <section class="updates">
+      <div class="container">
+        <h2>Sign up for text message updates</h2>
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+            <form class="form">
+              <fieldset>
+                <legend class="text--hidden">Your details</legend>
+                <div class="updates-number">
+                  <label class="form__label" for="telephone">Number</label>
+                  <input class="form__input" id="telephone" type="tel"/>
+                </div>
+                <div class="updates-postcode">
+                  <label for="address" class="form__label updates-postcode__label">Postcode</label>
+                  <button class="updates-postcode__button js-updates-postcode__button"><i class="fa fa-map-marker updates-postcode__icon" aria-hidden="true"></i><span class="text--hidden">Use your current location</span></button>
+                  <input id="updates-address-input" type="text" class="form__input updates-postcode__input"/>
+                </div>
+                <button class="btn btn-block btn-success btn--primary" type="submit">Sign up</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer role="contentinfo">
+    This is the footer
+  </footer>
+</div>
 <% include partials/foot %>

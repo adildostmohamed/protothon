@@ -1,0 +1,50 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 25px;
+  width: auto;
+  height: auto;
+  opacity: 0;
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  -o-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  z-index: -1;
+  -webkit-overflow-scrolling: touch;
+}
+
+.overlay--active {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: transparentize($color-white, 0.02);
+  width: auto;
+  height: auto;
+  z-index: 9;
+  opacity: 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.overlay-close {
+  text-align: right;
+}
+
+a.overlay-close__link {
+  color: $color-dark;
+  text-decoration: none;
+  @extend .text--large;
+  &.hover {
+    color: lighten($color-dark, 1);
+    text-decoration: none;
+  }
+}
+
+.overlay-close__text {
+  margin-left: 6px;
+}
