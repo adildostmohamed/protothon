@@ -1,6 +1,9 @@
 //import bootstrap main sass file
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+//import vendor sass files
+@import "vendor/font-awesome/font-awesome";
+
 //import custom sass partials
 @import "base/base";
 @import "components/components";

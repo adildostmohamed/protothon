@@ -1,12 +1,46 @@
-// test creation of an iife that returns some methods that can be used elsewhere
-var changeText = (function($){
-  var text = $('#h');
+var showOverlay = (function($) {
+  var overlay = $('.overlay');
+  var searchSetFocus = function() {
+    $('.js-search-input').focus();
+  };
   return {
-    get: function(){
-      return text;
+    searchActivate: function(target) {
+      $(target).on('click', function(e){
+        $(overlay).addClass('overlay--active');
+        searchSetFocus();
+      });
     },
-    change: function(newText){
-      $(text).text('Hello kids I cannot believe this might actually work' + newText);
+    searchClose: function(target) {
+      $(target).on('click', function(e) {
+        e.preventDefault();
+        $(overlay).removeClass('overlay--active');
+      });
     }
   };
-}(jQuery));
+})(jQuery);
+
+showOverlay.searchActivate('.js-hero__search-trigger');
+showOverlay.searchClose('.js-overlay-close__link');
+
+var searchInput = (function($){
+  var searchInput = $('.js-search-input');
+  var searchWrapper = $('.search');
+  var makeSearchActive = function(){
+    if(searchInput.val().length > 2) {
+      $('.search').addClass('search--active');
+      $('.search-hint').addClass('search-hint--hidden');
+    } else {
+      $('.search').removeClass('search--active');
+      $('.search-hint').removeClass('search-hint--hidden');
+    }
+  };
+  return {
+    startedTyping: function(){
+      $(searchInput).keydown(function() {
+        makeSearchActive();
+      });
+    }
+  };
+})(jQuery);
+
+searchInput.startedTyping();
