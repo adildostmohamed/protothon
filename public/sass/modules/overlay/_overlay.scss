@@ -24,10 +24,9 @@
   left: 0;
   background-color: transparentize($color-white, 0.02);
   width: auto;
-  height: auto;
+  height: 100vh;
   z-index: 9;
   opacity: 1;
-  overflow-y: scroll;
   overflow-x: hidden;
 }
 

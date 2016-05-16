@@ -37,15 +37,30 @@
 <div class="page-wrapper js-page-wrapper">
   <main role="main">
     <div class="page-alert js-page-alert">
-      <p class="page-alert__text js-page-alert__text">17 May 2016: Sorry we are currently dealing with an unplanned power cut affecting <span class="js-page-alert-postcode"></span><a class="page-alert__link">Track our progress</a></p>
+      <div class="container">
+        <div class="page-alert__text-wrapper js-page-alert__text-wrapper">
+          <!-- <i class="fa fa-exclamation-triangle page-alert__icon" aria-hidden="true"></i> -->
+          <p class="page-alert__text js-page-alert__text">17 May 2016: Sorry we are currently dealing with an unplanned power cut affecting <span class="js-page-alert-postcode"></span><a href="#" class="page-alert__link">Track our progress</a></p>
+        </div>
+      </div>
     </div>
     <section class="hero" class="parallax-window" >
       <% include partials/site-header %>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-            <label class="hero__search-label js-hero__search-trigger" for="hero-search-input">How can we help?</label>
-            <input id="hero-search-input" type="text" name="search" class="hero__search-input js-hero__search-trigger" />
+      <div class="hero-feature container">
+        <h1 class="hero-feature__title">Hello, we're <span class="hero-feature__title--thick">UK Power Networks</span></h1>
+        <p class="hero-feature__description">We own and maintain electricity cables and lines to make sure your lights stay on</p>
+        <a class="hero-feature__link" href="#">Discover more</a>
+      </div>
+      <div class="hero__search-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+              <div class="hero__search-label-wrapper">
+                <label class="hero__search-label js-hero__search-trigger" for="hero-search-input">How can we help you today?</label>
+                <i class="fa fa-chevron-right hero__search-icon" aria-hidden="true"></i>
+              </div>
+              <input id="hero-search-input" type="text" name="search" class="hero__search-input js-hero__search-trigger" />
+            </div>
           </div>
         </div>
       </div>
@@ -53,7 +68,6 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-xs-10">
-              First column search
             </div>
             <div class="col-xs-2 overlay-close">
               <a href="#" class="overlay-close__link js-overlay-close__link"><i class="fa fa-times overlay-close__icon" aria-hidden="true"></i><span class="overlay-close__text">Exit</span></a>
@@ -71,37 +85,103 @@
         </div>
       </div>
     </section>
-    <section class="map-wrapper js-map-wrapper container">
-      <h1 id="h">Hello world</h1>
-      <div class="map-expand__wrapper">
-        <button class="map-expand__btn js-expand__icon"><i class="fa fa-arrows-alt map-expand__icon"></i><span class="text--hidden">Expand map</span></button>
+    <section class="info">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-8 info-what">
+            <h2 class="info-what__heading">What <span class="info-what__heading--thick">we do...</span></h2>
+            <p class="info-what__description">We own and maintain electricity cables and lines across London, the South East and East of England making sure your lights stay on.  We maintain and upgrade power equipment. We move and connect new electricity cables.<br /><br />Your electricity supplier is the company you choose to buy your electricity from, and who you pay your bills to. If you look on your bill - part of what you pay is given to UK Power Networks for running and maintaining the power cables in your area.</p>
+          </div>
+          <div class="col-sm-4 info-report">
+            <h2 class="info-report__heading"><span class="info-report__heading--thick">Report</span> an issue</h2>
+            <p class="info-report__description">Report a power cut or another power issue and we’ll sort it out for you.</p>
+            <button class="info-report__btn">Report a fault</button>
+          </div>
+        </div>
       </div>
-      <div id="map" class="map js-map"></div>
-      <% include partials/map-issue %>
+    </section>
+    <section class="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 services-wrapper">
+            <article class="services-card">
+              <a href="#" class="services-card__link">
+                <div class="row">
+                  <div class="col-xs-8">
+                    <h3 class="services-card__title">Help with electricity <span class="services-card__title--thick">inside your home</span></h3>
+                  </div>
+                  <div class="col-xs-4">
+                    <i class="fa fa-chevron-right services-card__icon" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="col-sm-4 services-wrapper">
+            <article class="services-card">
+              <a href="#" class="services-card__link">
+                <div class="row">
+                  <div class="col-xs-8">
+                    <h3 class="services-card__title">Help with electricity <span class="services-card__title--thick">outside your home</span></h3>
+                  </div>
+                  <div class="col-xs-4">
+                    <i class="fa fa-chevron-right services-card__icon" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="col-sm-4 services-wrapper">
+            <article class="services-card">
+              <a href="#" class="services-card__link">
+                <div class="row">
+                  <div class="col-xs-8">
+                    <h3 class="services-card__title">Help with electricity <span class="services-card__title--thick">on your street</span></h3>
+                  </div>
+                  <div class="col-xs-4">
+                    <i class="fa fa-chevron-right services-card__icon" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="updates">
       <div class="container">
-        <h2>Sign up for text message updates</h2>
         <div class="row">
-          <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+          <div class="col-sm-4">
+
+          </div>
+          <div class="col-sm-5">
+            <h2 class="updates__title">Power cuts <span class="js-updates-location">near you</span></h2>
+            <p class="updates__description">Get SMS updates so you're not left in the dark</p>
             <form class="form">
               <fieldset>
                 <legend class="text--hidden">Your details</legend>
-                <div class="updates-number">
-                  <label class="form__label" for="telephone">Number</label>
-                  <input class="form__input" id="telephone" type="tel"/>
-                </div>
                 <div class="updates-postcode">
-                  <label for="address" class="form__label updates-postcode__label">Postcode</label>
-                  <button class="updates-postcode__button js-updates-postcode__button"><i class="fa fa-map-marker updates-postcode__icon" aria-hidden="true"></i><span class="text--hidden">Use your current location</span></button>
-                  <input id="updates-address-input" type="text" class="form__input updates-postcode__input"/>
+                  <label for="address" class="form__label">Postcode</label>
+                  <input id="updates-address-input" type="text" class="form__input updates-postcode__input" placeholder="Postcode"/>
                 </div>
-                <button class="btn btn-block btn-success btn--primary" type="submit">Sign up</button>
+                <div class="updates-number">
+                  <label class="form__label" for="telephone">Mobile number</label>
+                  <input class="form__input" id="telephone" type="tel" placeholder="Mobile number"/>
+                </div>
+                <button class="updates__btn" type="submit">Sign up</button>
               </fieldset>
             </form>
           </div>
         </div>
       </div>
+    </section>
+    <section class="map-wrapper js-map-wrapper container">
+      <h2 class="map__title">Known <span class="map__title--thick">incidents</span></h2>
+      <div class="map-expand__wrapper">
+        <button class="map-expand__btn js-expand__icon"><i class="fa fa-arrows-alt map-expand__icon"></i><span class="text--hidden">Expand map</span></button>
+      </div>
+      <div id="map" class="map js-map"></div>
+      <% include partials/map-issue %>
     </section>
   </main>
   <footer role="contentinfo">

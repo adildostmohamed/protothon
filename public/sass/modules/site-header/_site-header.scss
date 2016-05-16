@@ -1,13 +1,20 @@
 .site-header {
-  background-color: transparent;
+  background-color: transparentize($color-black, 0.75);
   padding: 24px 0;
 }
 
 %header__link {
   color: $color-white;
-  font-size: 2.0rem;
   text-decoration: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  display: block;
+  border: 1px solid $color-white;
+  padding: 8px 12px;
+  transition: all 0.25s;
+  @extend .text;
   &:hover, &:active {
+    background-color: transparentize($color-black, 0.5);
     color: $color-white;
     text-decoration: none;
   }
@@ -18,6 +25,11 @@
 }
 
 %header__text {
+  text-decoration: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $color-white;
+  @extend .text;
   display: none;
   @media(min-width: 768px) {
     display: inline-block;
@@ -25,8 +37,7 @@
 }
 
 %header__wrapper {
-  border: 1px solid $color-white;
-  padding: 8px 12px;
+  position: relative;
 }
 
 i.header__icon {
@@ -65,14 +76,13 @@ i.header__icon {
 }
 
 .header-location__text {
-  color: $color-white;
-  font-size: 2.0rem;
-  text-decoration: none;
-  text-transform: uppercase;
   @extend %header__text;
 }
 
 .header-location__text-set {
-  text-decoration: underline;
-  font-weight: bold;
+  border-bottom: 1px solid $color-white;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $color-white;
+  @extend .text;
 }

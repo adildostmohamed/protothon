@@ -1,0 +1,76 @@
+%info {
+  padding: 24px;
+  @media(min-width: 768px) {
+    height: 320px;
+    padding-top: 48px;
+  }
+}
+
+%info__heading {
+  @extend .text--big;
+  font-weight: 300;
+  margin: 18px 0 24px 0;
+}
+
+%info__heading--thick {
+  @extend .text--big;
+  font-weight: 500;
+}
+
+%info__description {
+  @extend .text;
+}
+
+.info-what {
+  background-color: $color-light-blue;
+  @extend %info;
+}
+
+.info-what__heading {
+  @extend %info__heading;
+  color: $color-black;
+}
+
+.info-what__heading--thick {
+  @extend %info__heading--thick;
+  color: $color-black;
+}
+
+.info-what__description {
+  @extend %info__description;
+  color: $color-black;
+}
+
+.info-report {
+  background-color: $color-dark;
+  @extend %info;
+}
+
+.info-report__heading {
+  @extend %info__heading;
+  color: $color-white;
+}
+
+.info-report__heading--thick {
+  @extend %info__heading--thick;
+  color: $color-white;
+}
+
+.info-report__description {
+  @extend %info__description;
+  color: $color-white;
+}
+
+.info-report__btn {
+  background-color: $color-white;
+  color: $color-orange;
+  outline: none;
+  border: none;
+  transition: all 0.25;
+  padding: 8px 12px;
+  font-weight: 500;
+  &:hover {
+    background-color: $color-orange;
+    color: $color-white;
+  }
+}

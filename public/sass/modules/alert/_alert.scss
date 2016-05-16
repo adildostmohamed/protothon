@@ -1,19 +1,44 @@
 .page-alert {
-  background-color: black;
+  background-color: $color-orange;
   height: 0px;
   transition: all 0.3s;
-  color: $color-white;
+}
+
+.page-alert--active {
+  padding-top: 24px;
+  height: 150px;
+  @media(min-width: 768px) {
+    height: 120px;
+  }
 }
 
 .page-alert__text {
   @extend .text--large;
-  display: none;
+  font-weight: 300;
+  color: $color-black;
+  display: inline-block;
 }
 
-.page-alert--active {
-  height: 150px;
+i.page-alert__icon {
+  @extend .text--large;
+  color: $color-red;
+  margin-right: 12px;
+  display: inline-block;
 }
 
-.page-alert__text--active{
-  display: block;
+.page-alert__link {
+  color: $color-black;
+  font-weight: 500;
+  &:hover {
+    color: $color-red;
+  }
+}
+
+
+.page-alert__text-wrapper {
+  visibility: hidden;
+}
+
+.page-alert__text-wrapper--active{
+  visibility: visible;
 }

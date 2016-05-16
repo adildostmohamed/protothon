@@ -7,6 +7,7 @@ var showOverlay = (function($) {
     searchActivate: function(target) {
       $(target).on('click', function(e){
         $(overlay).addClass('overlay--active');
+        $('body').addClass('body--no-scroll');
         searchSetFocus();
       });
     },
@@ -14,6 +15,7 @@ var showOverlay = (function($) {
       $(target).on('click', function(e) {
         e.preventDefault();
         $(overlay).removeClass('overlay--active');
+        $('body').removeClass('body--no-scroll');
       });
     }
   };

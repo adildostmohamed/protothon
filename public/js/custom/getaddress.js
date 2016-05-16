@@ -12,7 +12,10 @@ var getLocation = (function($){
   var showPrompt = function(content) {
     $('.js-page-alert-postcode').text(content.result[0].postcode + ' and ' + content.result[1].postcode + '.');
     $('.js-page-alert').addClass('page-alert--active');
-    $('.js-page-alert__text').addClass('page-alert__text--active');
+    $('.js-page-alert__text-wrapper').addClass('page-alert__text-wrapper--active');
+  };
+  var setUpdatesLocation = function(content) {
+    $('.js-updates-location').text('in ' + content);
   };
   var getAddress = function(position){
     var latitude  = position.coords.latitude;
@@ -35,6 +38,7 @@ var getLocation = (function($){
         console.log(postcodeInfo);
         // locationPermissionQuery(postcodeInfo.result[0].postcode);
         setLocactionHeader(postcodeInfo.result[0].admin_district);
+        setUpdatesLocation(postcodeInfo.result[0].admin_district);
         showPrompt(postcodeInfo);
         // console.log(postcodeInfo);
         $('#updates-address-input').val(data.result[0].postcode);
