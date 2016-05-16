@@ -1,0 +1,19 @@
+.page-alert {
+  background-color: black;
+  height: 0px;
+  transition: all 0.3s;
+  color: $color-white;
+}
+
+.page-alert__text {
+  @extend .text--large;
+  display: none;
+}
+
+.page-alert--active {
+  height: 150px;
+}
+
+.page-alert__text--active{
+  display: block;
+}

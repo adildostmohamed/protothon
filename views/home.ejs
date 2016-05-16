@@ -33,8 +33,12 @@
     </li>
   </ul>
 </nav>
+<% include partials/location-permission.ejs %>
 <div class="page-wrapper js-page-wrapper">
   <main role="main">
+    <div class="page-alert js-page-alert">
+      <p class="page-alert__text js-page-alert__text">17 May 2016: Sorry we are currently dealing with an unplanned power cut affecting <span class="js-page-alert-postcode"></span><a class="page-alert__link">Track our progress</a></p>
+    </div>
     <section class="hero" class="parallax-window" >
       <% include partials/site-header %>
       <div class="container">
