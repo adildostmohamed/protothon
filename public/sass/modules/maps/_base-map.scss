@@ -3,24 +3,37 @@
   transition: all 0.3s;
 }
 
+.map-wrapper {
+  padding: 36px;
+}
+
+.map__title {
+  @extend .text--big;
+  font-weight: 300;
+  color: $color-black;
+  margin-bottom: 24px;
+}
+
+.map__title--thick {
+  font-weight: 500;
+}
+
 .map--expanded {
   height: 100vh;
 }
 
 .map-expand__wrapper {
   text-align: right;
+  position: absolute;
+  z-index: 2;
 }
 
 .map-expand__btn {
-  position: relative;
   background-color: $color-white;
   border: none;
   outline: none;
   width: 36px;
   height: 36px;
-  top: 48px;
-  right: 12px;
-  z-index: 2;
 }
 
 i.map-expand__icon {

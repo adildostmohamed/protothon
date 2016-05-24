@@ -1,13 +1,23 @@
 .site-header {
-  background-color: transparent;
+  background-color: transparentize($color-black, 0.75);
   padding: 24px 0;
+  position: absolute;
+  width: 100%;
+  z-index: 9;
 }
 
 %header__link {
   color: $color-white;
-  font-size: 2.0rem;
   text-decoration: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  display: block;
+  border: 1px solid $color-white;
+  padding: 8px 12px;
+  transition: all 0.25s;
+  @extend .text;
   &:hover, &:active {
+    background-color: transparentize($color-black, 0.5);
     color: $color-white;
     text-decoration: none;
   }
@@ -17,22 +27,21 @@
   }
 }
 
-.header-menu__link {
-  @extend %header__link;
+%header__text {
+  text-decoration: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $color-white;
+  @extend .text;
+  display: none;
+  @media(min-width: 768px) {
+    display: inline-block;
+  }
 }
 
-.header-search__link {
-  @extend %header__link;
+%header__wrapper {
+  position: relative;
 }
-
-
-
-// .header-menu {
-//   color: $color-white;
-//   font-size: 2.0rem;
-//   display: inline-block;
-//   margin: 0;
-// }
 
 i.header__icon {
   color: $color-white;
@@ -40,9 +49,54 @@ i.header__icon {
   margin-right: 12px;
 }
 
-.header__search {
+.header-menu__wrapper {
+  @extend %header__wrapper;
+}
+
+.header-menu__link {
+  @extend %header__link;
+}
+
+.header-menu__text {
+  @extend %header__text;
+}
+
+.header-search__wrapper {
+  @extend %header__wrapper;
+}
+
+.header-search__link {
+  @extend %header__link;
+}
+
+.header-search__text {
+  @extend %header__text;
+}
+
+.header-location__wrapper {
+  text-align: right;
+  padding: 8px 12px;
+}
+
+.header-location__text {
+  @extend %header__text;
+}
+
+.header-location__text-set {
+  border-bottom: 1px solid $color-white;
+  font-weight: 500;
+  text-transform: uppercase;
   color: $color-white;
-  font-size: 2.0rem;
-  display: inline-block;
-  margin: 0;
+  @extend .text;
+}
+
+.header-logo__wrapper {
+  text-align: center;
+}
+
+.header-logo__img {
+  width: 100px;
+  @media (min-width: 768px) {
+    width: 140px;
+  }
 }

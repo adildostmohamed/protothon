@@ -1,0 +1,30 @@
+.live-report {
+  background-color: $color-turqoise;
+  padding-top: 120px;
+  padding-bottom: 36px;
+}
+
+.live-report-wrapper {
+  // padding-top: 120px;
+}
+
+.live-report-status {
+  text-align: center;
+}
+
+.live-report-status__header {
+  color: $color-white;
+  @extend .text--big;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+
+.live-report-status__header--thick {
+  font-weight: 500;
+}
+
+.live-report-status__description {
+  color: $color-white;
+  @extend .text;
+  text-transform: uppercase;
+}

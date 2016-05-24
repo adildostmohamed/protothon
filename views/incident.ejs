@@ -1,0 +1,225 @@
+<% include partials/head %>
+<% include partials/menu %>
+<% include partials/search-overlay %>
+<div class="page-wrapper js-page-wrapper">
+  <main role="main">
+    <% include partials/site-header %>
+    <!-- <% include partials/page-alert.ejs %> -->
+    <section class="live-report">
+      <div class="container">
+        <div class="live-report-wrapper">
+          <div class="row">
+            <div class="col-xs-12 live-report-status">
+              <h1 class="live-report-status__header">Unplanned powercut in <span class="live-report-status__header--thick js-live-report-status__header"></span></h1>
+              <p class="live-report-status__description">Live feed</p>
+            </div>
+            <div class="row">
+              <div class="container">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 live-report-timeline">
+                  <div class="col-md-3 live-report-step">
+                    <div class="live-report-step__wrapper">
+                      <p class="live-report-step__text">
+                        Identify
+                      </p>
+                      <div class="live-report-step__box--completed">
+                        <i class="fa fa-check live-report-step__icon" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 live-report-step">
+                    <div class="live-report-step__wrapper">
+                      <p class="live-report-step__text">
+                        Locate
+                      </p>
+                      <div class="live-report-step__box--completed">
+                        <i class="fa fa-check live-report-step__icon" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 live-report-step">
+                    <div class="live-report-step__wrapper">
+                      <p class="live-report-step__text">
+                        Repair
+                      </p>
+                      <div class="live-report-step__box--current">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 live-report-step">
+                    <div class="live-report-step__wrapper">
+                      <p class="live-report-step__text">
+                        Restore
+                      </p>
+                      <div class="live-report-step__box--pending">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="container">
+                <div class="col-md-4">
+                  <div class="live-report-info">
+                    <p class="live-report-info__statement">When was this issue reported?</p>
+                    <p class="live-report-info__statement--large">1:42 <span class="live-report-info__statement">PM</span></p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="live-report-info">
+                    <p class="live-report-info__statement">Expected time of restoration</p>
+                    <p class="live-report-info__statement--large">4:30 <span class="live-report-info__statement">PM</span></p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="live-report-info">
+                    <p class="live-report-info__statement">Number of properties affected</p>
+                    <p class="live-report-info__statement--large">40 <span class="live-report-info__statement">PROPERTIES</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="info">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-8 info-what">
+            <h2 class="info-what__heading">What our <span class="info-what__heading--thick">engineers are saying</span></h2>
+            <p class="info-what__description">We own and maintain electricity cables and lines across London, the South East and East of England making sure your lights stay on.  We maintain and upgrade power equipment. We move and connect new electricity cables.<br /><br />Your electricity supplier is the company you choose to buy your electricity from, and who you pay your bills to. If you look on your bill - part of what you pay is given to UK Power Networks for running and maintaining the power cables in your area.</p>
+          </div>
+          <div class="col-sm-4 info-report">
+            <h2 class="info-report__heading">Meet <span class="info-report__heading--thick">our engineers</span></h2>
+            <img class="info-report__img" src="/images/engineer.jpg" alt="Photo of engineer" />
+            <p class="info-report__description">Report a power cut or another power issue and we’ll sort it out for you.</p>
+            <button class="info-report__btn">Read more</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="map-wrapper js-map-wrapper container">
+      <h2 class="map__title"><span class="map__title--thick">Where </span>we are working</h2>
+      <div class="map-expand__wrapper">
+        <button class="map-expand__btn js-expand__icon"><i class="fa fa-arrows-alt map-expand__icon"></i><span class="text--hidden">Expand map</span></button>
+      </div>
+      <div id="map" class="map js-map"></div>
+    </section>
+    <section class="services--bg">
+      <div class="container">
+        <h2 class="services__header"><span class="services__header--thick">Things to do</span> in a power cut...</h2>
+        <div class="row">
+          <div class="col-sm-4 services-wrapper">
+            <article class="services-card">
+              <a href="#" class="services-card__link">
+                <div class="row">
+                  <div class="col-xs-8">
+                    <h3 class="services-card__title">Taking care <span class="services-card__title--thick">of pets during a cut</span></h3>
+                  </div>
+                  <div class="col-xs-4">
+                    <i class="fa fa-chevron-right services-card__icon" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="col-sm-4 services-wrapper">
+            <article class="services-card">
+              <a href="#" class="services-card__link">
+                <div class="row">
+                  <div class="col-xs-8">
+                    <h3 class="services-card__title">Send us <span class="services-card__title--thick">your shadow puppets</span></h3>
+                  </div>
+                  <div class="col-xs-4">
+                    <i class="fa fa-chevron-right services-card__icon" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="col-sm-4 services-wrapper">
+            <article class="services-card">
+              <a href="#" class="services-card__link">
+                <div class="row">
+                  <div class="col-xs-8">
+                    <h3 class="services-card__title">What to do with <span class="services-card__title--thick">your freezer</span></h3>
+                  </div>
+                  <div class="col-xs-4">
+                    <i class="fa fa-chevron-right services-card__icon" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="social">
+      <div class="container">
+        <h2 class="social__title">Find out more on our <span class="social__title--thick">social media channels</span></h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-8">
+            <div class="social-tweet__wrapper">
+              <p class="social-tweet__text">How do we fix an underground electricity cable fault? Watch our video to find out: <strong>http://bit.ly/q42F3</strong></p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="row social-channel-row--first">
+              <div class="col-xs-6">
+                <div class="social-channel">
+                  <a href="https://twitter.com/UKPowerNetworks" target="_blank" class="social-channel__link"><i class="fa fa-twitter social-channel__icon" aria-hidden="true"></i></a>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="social-channel">
+                  <a href="https://www.facebook.com/ukpowernetworks" target="_blank" class="social-channel__link"><i class="fa fa-facebook social-channel__icon" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="row social-chanel-row">
+              <div class="col-xs-6">
+                <div class="social-channel">
+                  <a href="http://uk.linkedin.com/company/uk-power-networks" target="_blank" class="social-channel__link"><i class="fa fa-linkedin social-channel__icon" aria-hidden="true"></i></a>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="social-channel">
+                  <a href="https://www.youtube.com/user/UKPowerNetworks" target="_blank" class="social-channel__link"><i class="fa fa-youtube social-channel__icon" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="updates">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 updates-phone">
+            <img class="updates-phone__img" src="/images/text-update.png" alt="image of a phone with text" />
+          </div>
+          <div class="col-sm-5">
+            <h2 class="updates__title">Power cuts <span class="js-updates-location">near you</span></h2>
+            <p class="updates__description">Get SMS updates so you're not left in the dark</p>
+            <form class="form" action="/confirmation">
+              <fieldset>
+                <legend class="text--hidden">Your details</legend>
+                <div class="updates-postcode">
+                  <label for="address" class="form__label">Postcode</label>
+                  <input id="updates-address-input" type="text" class="form__input updates-postcode__input" placeholder="Postcode"/>
+                </div>
+                <div class="updates-number">
+                  <label class="form__label" for="telephone">Mobile number</label>
+                  <input class="form__input" id="telephone" type="tel" placeholder="Mobile number"/>
+                </div>
+                <button class="updates__btn" type="submit">Sign up now</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+<% include partials/foot %>

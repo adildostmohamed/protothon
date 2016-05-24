@@ -1,0 +1,45 @@
+.page-alert {
+  background-color: $color-orange;
+  height: 0px;
+  transition: all 0.3s;
+}
+
+.page-alert--active {
+  padding: 24px 0;
+  height: auto;
+  // height: 150px;
+  @media(min-width: 768px) {
+    // height: 120px;
+  }
+}
+
+.page-alert__text {
+  @extend .text--large;
+  font-weight: 300;
+  color: $color-black;
+  display: inline-block;
+}
+
+i.page-alert__icon {
+  @extend .text--large;
+  color: $color-red;
+  margin-right: 12px;
+  display: inline-block;
+}
+
+.page-alert__link {
+  color: $color-black;
+  font-weight: 500;
+  &:hover {
+    color: $color-red;
+  }
+}
+
+
+.page-alert__text-wrapper {
+  visibility: hidden;
+}
+
+.page-alert__text-wrapper--active{
+  visibility: visible;
+}

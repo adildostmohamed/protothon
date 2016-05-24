@@ -6,7 +6,9 @@ var showOverlay = (function($) {
   return {
     searchActivate: function(target) {
       $(target).on('click', function(e){
+        e.preventDefault();
         $(overlay).addClass('overlay--active');
+        $('body').addClass('body--no-scroll');
         searchSetFocus();
       });
     },
@@ -14,12 +16,14 @@ var showOverlay = (function($) {
       $(target).on('click', function(e) {
         e.preventDefault();
         $(overlay).removeClass('overlay--active');
+        $('body').removeClass('body--no-scroll');
       });
     }
   };
 })(jQuery);
 
 showOverlay.searchActivate('.js-hero__search-trigger');
+showOverlay.searchActivate('.js-header-search__link');
 showOverlay.searchClose('.js-overlay-close__link');
 
 var searchInput = (function($){

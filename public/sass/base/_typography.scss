@@ -1,7 +1,7 @@
 //set font size so that 1 rem = 10px
 body {
   font-size: 62.5%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @extend .text;
@@ -14,9 +14,12 @@ body {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-
 .text--feature {
   font-size: 4.2rem;
+}
+
+.text--big {
+  font-size: 2.8rem;
 }
 
 .text--large {

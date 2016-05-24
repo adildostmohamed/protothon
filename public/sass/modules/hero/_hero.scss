@@ -1,31 +1,104 @@
 .hero {
-  height: 90vh;
-  background: transparent;
-  background: url('../images/hero-bg-image.jpg') no-repeat center center;
+  position: relative;
+  height: 75vh;
+  background: url('../images/london.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
+.hero-feature {
+  text-align: center;
+  position: relative;
+  top: 15vh;
+}
+
+.hero-feature__title {
+  color: $color-white;
+  @extend .text--feature;
+  font-weight: 300;
+  margin-bottom: 24px;
+}
+
+.hero-feature__title--thick {
+  font-weight: 500;
+}
+
+.hero-feature__description {
+  @extend .text--large;
+  @extend .col-sm-6;
+  @extend .col-sm-offset-3;
+  color: $color-white;
+  font-weight: 300;
+}
+
+.hero-feature__link {
+  @extend .text;
+  @extend .col-sm-6;
+  @extend .col-sm-offset-3;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-decoration: underline;
+  color: $color-white;
+  &:hover,
+  &:focus {
+    color:$color-orange;
+  }
+}
+
+
+.hero__search-label-wrapper {
+  position: relative;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .hero__search-label {
   width: 100%;
-  font-size: 2.0rem;
-  line-height: 1;
-  text-align: center;
+  @extend .text--large;
+  line-height: 60px;
   display: block;
   margin: 0;
-  position: relative;
-  top: ((48/2) + (20/2)) * 1px;
+  font-weight: 300;
+  color: $color-white;
+  position: absolute;
+  left: 15px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+i.hero__search-icon {
+  position: absolute;
+  padding: 10px;
+  right: 15px;
+  top: 9px;
+  background-color: white;
+  color: $color-light-b;
+  @extend .text--large;
 }
 
 .hero__search-input {
   width: 100%;
-  min-height: 48px;
-  font-size: 2.0rem;
+  min-height: 60px;
+  @extend .text--large;
   text-align: center;
   border: none;
   outline: none;
-  background-color: transparentize($color-white, 0.3);
+  background-color: transparent;
   border-radius: 1px;
+  border: 1px solid transparentize($color-white, 0.5);
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.hero__search-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: transparentize($color-black, 0.5);
+  padding: 36px 0;
 }

@@ -25,6 +25,16 @@ app.get('/', function(req, res) {
   res.render("home");
 });
 
+//Incident route
+app.get('/incidents/123', function(req, res) {
+  res.render("incident");
+});
+
+//Confirmation route
+app.get('/confirmation', function(req, res) {
+  res.render("confirmation");
+});
+
 //SET PORT AND RUN SERVER
 var port = process.env.PORT || 8080;
 app.listen(port);

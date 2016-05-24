@@ -1,0 +1,58 @@
+.services {
+  padding: 60px 0 42px 0;
+}
+
+.services-card {
+  padding: 72px 15px 24px 15px;
+  border: 1px solid $color-turqoise;
+  transition: all 0.3s;
+  margin-bottom: 18px;
+  &:hover {
+    background-color: $color-turqoise;
+    cursor: pointer;
+  }
+}
+
+.services-card__link {
+  &:hover{
+    background-color: $color-turqoise;
+  }
+}
+
+.services-card__title {
+  color: $color-black;
+  font-weight: 300;
+  margin: 0;
+  @extend .text--large;
+}
+
+.services-card__title--thick {
+  font-weight: 500;
+}
+
+i.services-card__icon {
+  color: $color-black;
+  position: absolute;
+  right: 15px;
+  top: 18px;
+  padding: 6px 8px;
+  border: 1px solid $color-black;
+}
+
+.services--bg {
+  background-color: $color-light-blue;
+  padding: 36px 0;
+}
+
+.services__header {
+  @extend .text--big;
+  font-weight: 300;
+  color: $color-black;
+  margin: 0 0 18px 0;
+}
+
+.services__header--thick {
+  @extend .text--big;
+  font-weight: 500;
+  color: $color-black;
+}
