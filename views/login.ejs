@@ -1,0 +1,27 @@
+<% include partials/head %>
+
+<section class="login-wrapper">
+  <div class="container">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1 class="login__header"><img class="login__img" src="/images/ukpnlogo.svg" alt="UKPN Logo" /></h1>
+      <!-- show any messages that come back with authentication -->
+      <% if (message.length > 0) { %>
+          <div class="alert alert-danger"><%= message %></div>
+      <% } %>
+      <form class="login-form" action="/login" method="POST">
+        <fieldset>
+          <legend class="text--hidden">Login</legend>
+          <div class="input-wrapper">
+            <label for="username" class="form__label">Username</label>
+            <input id="username" name"username" type="text" class="form__input" placeholder="Username" autocomplete="off"/>
+          </div>
+          <div class="input-wrapper">
+            <label class="form__label" for="password">Password</label>
+            <input class="form__input" name="password" id="password" type="password" placeholder="Password" autocomplete="off"/>
+          </div>
+          <button class="updates__btn" type="submit">Login</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</section>
