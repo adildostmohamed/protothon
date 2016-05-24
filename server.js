@@ -20,20 +20,8 @@ app.use(methodOverride("_method"));
 //mongoose.connect('mongodb://localhost/insertappnamehere');
 
 //SET UP ROUTES
-//Home route
-app.get('/', function(req, res) {
-  res.render("home");
-});
-
-//Incident route
-app.get('/incidents/123', function(req, res) {
-  res.render("incident");
-});
-
-//Confirmation route
-app.get('/confirmation', function(req, res) {
-  res.render("confirmation");
-});
+//Import routes
+require('./app/routes.js')(app);
 
 //SET PORT AND RUN SERVER
 var port = process.env.PORT || 8080;
