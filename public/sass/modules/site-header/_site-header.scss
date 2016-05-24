@@ -12,7 +12,6 @@
   font-weight: 300;
   text-transform: uppercase;
   display: block;
-  border: 1px solid $color-white;
   padding: 8px 12px;
   transition: all 0.25s;
   @extend .text;
@@ -24,6 +23,9 @@
   &:focus {
     color: $color-white;
     text-decoration: none;
+  }
+  @media (min-width: 768px) {
+    border: 1px solid $color-white;
   }
 }
 
