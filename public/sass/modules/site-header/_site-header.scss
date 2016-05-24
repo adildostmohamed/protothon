@@ -1,6 +1,9 @@
 .site-header {
   background-color: transparentize($color-black, 0.75);
   padding: 24px 0;
+  position: absolute;
+  width: 100%;
+  z-index: 9;
 }
 
 %header__link {
@@ -85,4 +88,15 @@ i.header__icon {
   text-transform: uppercase;
   color: $color-white;
   @extend .text;
+}
+
+.header-logo__wrapper {
+  text-align: center;
+}
+
+.header-logo__img {
+  width: 100px;
+  @media (min-width: 768px) {
+    width: 140px;
+  }
 }

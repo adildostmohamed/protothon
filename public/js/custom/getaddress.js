@@ -17,6 +17,9 @@ var getLocation = (function($){
   var setUpdatesLocation = function(content) {
     $('.js-updates-location').text('in ' + content);
   };
+  var setLiveReportPostcode = function(content) {
+    $('.js-live-report-status__header').text(content.result[0].postcode);
+  }
   var getAddress = function(position){
     var latitude  = position.coords.latitude;
     var longitude = position.coords.longitude;
@@ -40,6 +43,7 @@ var getLocation = (function($){
         setLocactionHeader(postcodeInfo.result[0].admin_district);
         setUpdatesLocation(postcodeInfo.result[0].admin_district);
         showPrompt(postcodeInfo);
+        setLiveReportPostcode(postcodeInfo);
         // console.log(postcodeInfo);
         $('#updates-address-input').val(data.result[0].postcode);
       }

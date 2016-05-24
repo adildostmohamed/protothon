@@ -5,10 +5,11 @@
 }
 
 .page-alert--active {
-  padding-top: 24px;
-  height: 150px;
+  padding: 24px 0;
+  height: auto;
+  // height: 150px;
   @media(min-width: 768px) {
-    height: 120px;
+    // height: 120px;
   }
 }
 

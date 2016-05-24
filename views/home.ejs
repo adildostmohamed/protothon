@@ -1,51 +1,11 @@
 <% include partials/head %>
-<nav role="navigation" class="col-xs-6 main-nav js-main-nav">
-  <ul class="main-nav__list">
-    <li class="main-nav__item">
-      <a class="main-nav__link">About us</a>
-    </li>
-    <li class="main-nav__item">
-      <a class="main-nav__link">Safety</a>
-    </li>
-    <li class="main-nav__item">
-      <a class="main-nav__link">News and press</a>
-    </li>
-    <li class="main-nav__item">
-      <a class="main-nav__link">Innovation</a>
-    </li>
-    <li class="main-nav__item">
-      <a class="main-nav__link">Have your say</a>
-    </li>
-    <li class="main-nav__item">
-      <a class="main-nav__link">Careers</a>
-    </li>
-    <li class="main-nav__item">
-      <a class="main-nav__link">Infrastructure services</a>
-    </li>
-    <li class="main-nav__item">
-      <a class="main-nav__link">Community</a>
-    </li>
-    <li class="main-nav__item">
-      <a class="main-nav__link">Blog</a>
-    </li>
-    <li class="main-nav__item">
-      <a class="main-nav__link">Contact us</a>
-    </li>
-  </ul>
-</nav>
-<% include partials/location-permission.ejs %>
+<% include partials/menu %>
+<% include partials/search-overlay %>
 <div class="page-wrapper js-page-wrapper">
   <main role="main">
-    <div class="page-alert js-page-alert">
-      <div class="container">
-        <div class="page-alert__text-wrapper js-page-alert__text-wrapper">
-          <!-- <i class="fa fa-exclamation-triangle page-alert__icon" aria-hidden="true"></i> -->
-          <p class="page-alert__text js-page-alert__text">17 May 2016: Sorry we are currently dealing with an unplanned power cut affecting <span class="js-page-alert-postcode"></span><a href="#" class="page-alert__link">Track our progress</a></p>
-        </div>
-      </div>
-    </div>
-    <section class="hero" class="parallax-window" >
-      <% include partials/site-header %>
+    <% include partials/page-alert.ejs %>
+    <% include partials/site-header %>
+    <section class="hero">
       <div class="hero-feature container">
         <h1 class="hero-feature__title">Hello, we're <span class="hero-feature__title--thick">UK Power Networks</span></h1>
         <p class="hero-feature__description">We own and maintain electricity cables and lines to make sure your lights stay on</p>
@@ -64,26 +24,13 @@
           </div>
         </div>
       </div>
-      <div class="overlay">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-xs-10">
-            </div>
-            <div class="col-xs-2 overlay-close">
-              <a href="#" class="overlay-close__link js-overlay-close__link"><i class="fa fa-times overlay-close__icon" aria-hidden="true"></i><span class="overlay-close__text">Exit</span></a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 search">
-              <p id="search-hint" class="search-hint">
-                Start typing to find results
-              </p>
-              <label class="text--hidden" for="search-input">Search</label>
-              <i class="fa fa-search search-icon"></i><input id="search-input" class="search-input js-search-input" name="search-input" type="text" aria-describedby="search-hint"/>
-            </div>
-          </div>
-        </div>
+    </section>
+    <section class="map-wrapper js-map-wrapper container">
+      <h2 class="map__title">Known <span class="map__title--thick">incidents</span></h2>
+      <div class="map-expand__wrapper">
+        <button class="map-expand__btn js-expand__icon"><i class="fa fa-arrows-alt map-expand__icon"></i><span class="text--hidden">Expand map</span></button>
       </div>
+      <div id="map" class="map js-map"></div>
     </section>
     <section class="info">
       <div class="container-fluid">
@@ -151,13 +98,13 @@
     <section class="updates">
       <div class="container">
         <div class="row">
-          <div class="col-sm-4">
-
+          <div class="col-sm-4 updates-phone">
+            <img class="updates-phone__img" src="/images/text-update.png" alt="image of a phone with text" />
           </div>
           <div class="col-sm-5">
             <h2 class="updates__title">Power cuts <span class="js-updates-location">near you</span></h2>
             <p class="updates__description">Get SMS updates so you're not left in the dark</p>
-            <form class="form">
+            <form id="signUpForm" class="form" action="/confirmation">
               <fieldset>
                 <legend class="text--hidden">Your details</legend>
                 <div class="updates-postcode">
@@ -168,24 +115,51 @@
                   <label class="form__label" for="telephone">Mobile number</label>
                   <input class="form__input" id="telephone" type="tel" placeholder="Mobile number"/>
                 </div>
-                <button class="updates__btn" type="submit">Sign up</button>
+                <button class="updates__btn" type="submit">Sign up now</button>
               </fieldset>
             </form>
           </div>
         </div>
       </div>
     </section>
-    <section class="map-wrapper js-map-wrapper container">
-      <h2 class="map__title">Known <span class="map__title--thick">incidents</span></h2>
-      <div class="map-expand__wrapper">
-        <button class="map-expand__btn js-expand__icon"><i class="fa fa-arrows-alt map-expand__icon"></i><span class="text--hidden">Expand map</span></button>
+    <section class="social">
+      <div class="container">
+        <h2 class="social__title">Find out more on our <span class="social__title--thick">social media channels</span></h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-8">
+            <div class="social-tweet__wrapper">
+              <p class="social-tweet__text">How do we fix an underground electricity cable fault? Watch our video to find out: <strong>http://bit.ly/q42F3</strong></p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="row social-channel-row--first">
+              <div class="col-xs-6">
+                <div class="social-channel">
+                  <a href="https://twitter.com/UKPowerNetworks" target="_blank" class="social-channel__link"><i class="fa fa-twitter social-channel__icon" aria-hidden="true"></i></a>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="social-channel">
+                  <a href="https://www.facebook.com/ukpowernetworks" target="_blank" class="social-channel__link"><i class="fa fa-facebook social-channel__icon" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="row social-chanel-row">
+              <div class="col-xs-6">
+                <div class="social-channel">
+                  <a href="http://uk.linkedin.com/company/uk-power-networks" target="_blank" class="social-channel__link"><i class="fa fa-linkedin social-channel__icon" aria-hidden="true"></i></a>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="social-channel">
+                  <a href="https://www.youtube.com/user/UKPowerNetworks" target="_blank" class="social-channel__link"><i class="fa fa-youtube social-channel__icon" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="map" class="map js-map"></div>
-      <% include partials/map-issue %>
     </section>
   </main>
-  <footer role="contentinfo">
-    This is the footer
-  </footer>
 </div>
 <% include partials/foot %>

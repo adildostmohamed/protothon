@@ -2,7 +2,7 @@ var expandMap = (function($){
   var expandTrigger = $('.js-expand__icon');
   var isExpanded = false;
   var mapContainer = $('.js-map');
-  var mapWrapper = $('map-wrapper');
+  var mapWrapper = $('.js-map-wrapper');
   var setContainerFluid = function(target) {
     $(target).removeClass('container');
     $(target).addClass('container-fluid');

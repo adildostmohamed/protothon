@@ -1,0 +1,58 @@
+.live-report-timeline {
+  padding: 48px 0;
+}
+
+%live-report-step__box {
+  width: 40px;
+  height: 40px;
+  border: 1px solid $color-white;
+  @media (min-width: 768px) {
+      margin: 0 auto;
+  }
+}
+
+%live-report-step--completed {
+  background-color: $color-orange;
+}
+
+%live-report-step--current {
+  background-color: $color-black;
+}
+
+%live-report-step--pending {
+  background-color: $color-white;
+}
+
+.live-report-step__wrapper {
+  margin-bottom: 12px;
+  @media (min-width: 768px) {
+    text-align: center;
+  }
+}
+
+.live-report-step__box--completed {
+  @extend %live-report-step__box;
+  @extend %live-report-step--completed;
+}
+
+.live-report-step__box--current {
+  @extend %live-report-step__box;
+  @extend %live-report-step--current;
+}
+
+.live-report-step__box--pending {
+  @extend %live-report-step__box;
+  @extend %live-report-step--pending;
+}
+
+.live-report-step__text {
+  color: $color-white;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+i.live-report-step__icon {
+  color: darken($color-orange, 40%);
+  position: relative;
+  top: 8px;
+}

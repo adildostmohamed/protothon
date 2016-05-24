@@ -1,0 +1,59 @@
+.social {
+  background: url('../images/social.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 48px 0;
+  border-top: 4px solid $color-orange;
+}
+
+.social__title {
+  @extend .text--big;
+  color: $color-white;
+  font-weight: 300;
+  margin-bottom: 24px;
+}
+
+.social__title--thick {
+  color: $color-white;
+  @extend .text--big;
+  font-weight: 500;
+}
+
+.social-tweet__wrapper {
+  padding: 18px;
+  border: 1px solid $color-turqoise;
+  height: 200px;
+  margin-bottom: 20px;
+  @media(min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.social-tweet__text {
+  @extend .text--large;
+  color: $color-white;
+}
+
+.social-channel-row--first {
+  margin-bottom: 20px;
+}
+
+.social-channel {
+  height: 90px;
+  border: 1px solid $color-turqoise;
+  padding-top: 24px;
+  padding-left: 60px;
+  transition: all 0.3s;
+  &:hover,
+  &:focus {
+    background-color: $color-turqoise;
+    cursor: pointer;
+  }
+}
+
+i.social-channel__icon {
+  @extend .text--feature;
+  color: $color-white;
+}

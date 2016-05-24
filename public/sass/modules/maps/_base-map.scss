@@ -24,18 +24,16 @@
 
 .map-expand__wrapper {
   text-align: right;
+  position: absolute;
+  z-index: 2;
 }
 
 .map-expand__btn {
-  position: relative;
   background-color: $color-white;
   border: none;
   outline: none;
   width: 36px;
   height: 36px;
-  top: 48px;
-  right: 12px;
-  z-index: 2;
 }
 
 i.map-expand__icon {

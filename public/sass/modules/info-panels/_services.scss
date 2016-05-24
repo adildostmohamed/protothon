@@ -38,3 +38,21 @@ i.services-card__icon {
   padding: 6px 8px;
   border: 1px solid $color-black;
 }
+
+.services--bg {
+  background-color: $color-light-blue;
+  padding: 36px 0;
+}
+
+.services__header {
+  @extend .text--big;
+  font-weight: 300;
+  color: $color-black;
+  margin: 0 0 18px 0;
+}
+
+.services__header--thick {
+  @extend .text--big;
+  font-weight: 500;
+  color: $color-black;
+}

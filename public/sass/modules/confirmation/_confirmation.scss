@@ -1,0 +1,84 @@
+.confirmation-header {
+  background-color: $color-turqoise;
+  padding: 180px 0 60px 0;
+}
+
+.confirmation-wrapper {
+  padding: 36px 0;
+  border-top: 1px solid darken($color-turqoise, 20%);
+  border-bottom: 1px solid darken($color-turqoise, 20%);
+  text-align: center;
+}
+
+.confirmation-header__title {
+  margin: 0 0 18px 0;
+  color: $color-white;
+  @extend .text--large;
+}
+
+.confirmation-header__description{
+  margin: 0 0 18px 0;
+  color: $color-white;
+  @extend .text;
+}
+
+.confirmation-header__link {
+  margin-top: 24px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 12px;
+  background-color: darken($color-turqoise, 20%);
+  color: $color-white;
+  transition: all 0.3s;
+  text-decoration: none;
+  @extend .text;
+  &:hover,
+  &:focus {
+    background-color: darken($color-turqoise, 30%);
+    color: $color-white;
+    text-decoration: none;
+  }
+}
+
+.others {
+  background: url('../images/psr.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.others-wrapper {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.others__title {
+  margin: 0 0 18px 0;
+  color: $color-white;
+  @extend .text--large;
+}
+
+.others__description {
+  margin: 0 0 18px 0;
+  color: $color-white;
+  @extend .text;
+}
+
+.others__link {
+  margin-top: 24px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 12px;
+  background-color: $color-white;
+  color: $color-black;
+  transition: all 0.3s;
+  text-decoration: none;
+  @extend .text;
+  &:hover,
+  &:focus {
+    background-color: $color-turqoise;
+    color: $color-white;
+    text-decoration: none;
+  }
+}

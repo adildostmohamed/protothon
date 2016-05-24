@@ -1,0 +1,22 @@
+.live-report-info {
+  padding: 18px;
+  border: 1px solid lighten($color-turqoise, 10%);
+  margin-bottom: 12px;
+}
+
+.live-report-info__statement {
+  color: $color-black;
+  @extend .text--large;
+}
+
+.live-report-info__statement--large {
+  font-weight: 300;
+  color: $color-black;
+  @extend .text--big;
+}
+
+.live-report-info__statement--detail {
+  font-weight: 500;
+  color: $color-black;
+  @extend .text;
+}
