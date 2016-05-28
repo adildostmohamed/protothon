@@ -16,6 +16,7 @@ app.set('view engine', 'ejs');
 //set public directory for static assets
 app.use(express.static('public'));
 //use bodyParser to get values from forms
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 //use method-override to update form methods
 app.use(methodOverride("_method"));
