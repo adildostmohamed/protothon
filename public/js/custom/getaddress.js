@@ -1,11 +1,4 @@
 var getLocation = (function($){
-  var locationPermissionQuery = function(content){
-    $('#location-permission').modal('show');
-    $('#location-permission').on('shown.bs.modal', function (e) {
-      $('.js-postcode-input').text(content);
-    });
-    console.log('launched');
-  };
   var setLocactionHeader = function(content) {
     $('.js-header-location__text-set').text(content);
   };
@@ -38,13 +31,10 @@ var getLocation = (function($){
       },
       success: function(data, textStatus, jqXHR) {
         var postcodeInfo = data;
-        console.log(postcodeInfo);
-        // locationPermissionQuery(postcodeInfo.result[0].postcode);
         setLocactionHeader(postcodeInfo.result[0].admin_district);
         setUpdatesLocation(postcodeInfo.result[0].admin_district);
         showPrompt(postcodeInfo);
         setLiveReportPostcode(postcodeInfo);
-        // console.log(postcodeInfo);
         $('#updates-address-input').val(data.result[0].postcode);
       }
     });
