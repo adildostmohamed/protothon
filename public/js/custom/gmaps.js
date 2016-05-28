@@ -86,5 +86,4 @@ function initMap() {
 
 function handleLocationError(browserHasGeolocation, marker, pos) {
   marker.setPosition(pos);
-  marker.setContent(browserHasGeolocation ? 'Error: The Geolocation service failed.' : 'Error: Your browser doesn\'t support geolocation.');
 }
