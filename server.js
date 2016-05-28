@@ -39,8 +39,9 @@ app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
 //DB SET UP
+var dburl = process.env.DATABASEURL || 'mongodb://localhost/ukpn_protothon_app';
 //Connect to mongoose
-mongoose.connect('mongodb://localhost/ukpn_protothon_app');
+mongoose.connect(dburl);
 
 //SET UP ROUTES
 //Import routes
