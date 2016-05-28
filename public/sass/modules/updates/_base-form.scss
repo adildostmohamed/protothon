@@ -23,6 +23,14 @@
   border: 1px solid darken($color-turqoise, 20%);
   margin-bottom: 18px;
   padding-left: 12px;
+  transition: all 0.3s;
+  &:hover {
+    border: 1px solid darken($color-turqoise, 30%);
+  }
+  &:focus {
+    outline: 2px solid $color-orange;
+    border: 1px solid transparent;
+  }
 }
 
 .updates__btn {
