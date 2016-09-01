@@ -1,4 +1,9 @@
 var getLocation = (function($){
+  var setDate = function() {
+    var date = new Date();
+    var dateString = date.toDateString();
+    $('.js-page-alert-date').text(dateString);
+  };
   var setLocactionHeader = function(content) {
     $('.js-header-location__text-set').text(content);
   };
@@ -33,6 +38,7 @@ var getLocation = (function($){
         var postcodeInfo = data;
         setLocactionHeader(postcodeInfo.result[0].admin_district);
         setUpdatesLocation(postcodeInfo.result[0].admin_district);
+        setDate();
         showPrompt(postcodeInfo);
         setLiveReportPostcode(postcodeInfo);
         $('#updates-address-input').val(data.result[0].postcode);
