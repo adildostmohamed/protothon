@@ -1,11 +1,13 @@
 .live-report-timeline {
   padding: 48px 0;
+  text-align: center;
 }
 
 %live-report-step__box {
   width: 40px;
   height: 40px;
   border: 1px solid $color-white;
+  margin: 0 auto;
   @media (min-width: 768px) {
       margin: 0 auto;
   }

@@ -1,7 +1,7 @@
 module.exports = function(app, passport) {
   //SET UP ROUTES
   //Home route
-  app.get('/', isLoggedIn, function(req, res) {
+  app.get('/', function(req, res) {
     res.render("home");
   });
 
